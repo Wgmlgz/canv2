@@ -3,12 +3,16 @@
  * License: https://github.com/bkaradzic/bgfx/blob/master/LICENSE
  */
 
+#ifndef ENTRY_HTML5_HEADER_GUARD
+#define ENTRY_HTML5_HEADER_GUARD
+
 #include "entry_p.h"
 
 #include <bgfx/platform.h>
 
 #include <emscripten.h>
 #include <emscripten/html5.h>
+#include <iostream>
 
 extern "C" void entry_emscripten_yield()
 {
@@ -438,3 +442,5 @@ int main(int _argc, const char* const* _argv)
 	using namespace entry;
 	return s_ctx.run(_argc, _argv);
 }
+
+#endif // ENTRY_HTML5_HEADER_GUARD

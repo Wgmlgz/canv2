@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently npm:watch-*",
     "watch-cmake": "nodemon  --watch CMakeLists.txt --exec 'make init'",
-    "watch-src": "nodemon --watch src -e cpp,hpp --exec 'make build'"
+    "watch-src": "nodemon --watch src -e cpp,hpp --exec 'make build || echo \"no\"'"
   },
   "keywords": [],
   "author": "",
