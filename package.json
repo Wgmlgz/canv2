@@ -1,0 +1,19 @@
+{
+  "name": "canvas-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently npm:watch-*",
+    "watch-cmake": "nodemon  --watch CMakeLists.txt --exec 'make init'",
+    "watch-src": "nodemon --watch src -e cpp,hpp --exec 'make build'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1",
+    "run-all": "^1.0.1"
+  }
+}
